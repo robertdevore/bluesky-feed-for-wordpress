@@ -1,0 +1,118 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Bluesky Feed for WordPress®\n"
+"POT-Creation-Date: 2024-11-26 22:35-0500\n"
+"PO-Revision-Date: 2024-11-26 22:35-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: bluesky-feed-for-wordpress.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: bluesky-feed-for-wordpress.php:84
+msgid "Bluesky Feed for WordPress® Settings"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:85
+msgid "Bluesky Feed"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:108
+msgid "Bluesky Logo"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:110
+msgid "Bluesky Feed Settings"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:113
+msgid "Support"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:116
+msgid "Documentation"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:125
+msgid "Bluesky Username"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:137
+msgid "Theme"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:140
+msgid "Light"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:141
+msgid "Dim"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:142
+msgid "Dark"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:147
+msgid "Number of Posts"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:159
+msgid "Include Pins"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:170
+msgid "Include Link to Original Post"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:184
+msgid "Feed Preview"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:323
+msgid "Bluesky Feed Widget"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:325
+msgid "Display your recent Bluesky posts."
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:367
+msgid ""
+"This widget uses global settings. Update settings in the plugin options page."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Bluesky Feed for WordPress®"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/robertdevore/bluesky-feed-for-wordpress/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Showcase your latest Bluesky posts on your WordPress® site with customizable "
+"display options and seamless integration"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Robert DeVore"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://robertdevore.com/"
+msgstr ""

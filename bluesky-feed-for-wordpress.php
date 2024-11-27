@@ -238,7 +238,11 @@ class Bluesky_Feed {
      * @since  1.0.0
      * @return void
      */
-    public function enqueue_admin_assets() {
+    public function enqueue_admin_assets( $hook ) {
+        if ( strpos( $hook, 'bluesky-feed' ) === false ) {
+            return;
+        }
+
         wp_enqueue_script( 
             'axios', 
             plugin_dir_url( __FILE__ ) . 'assets/js/axios.min.js', 
