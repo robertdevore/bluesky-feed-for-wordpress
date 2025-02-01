@@ -74,6 +74,18 @@
     font-weight: 500;
 }
 
+#bluesky-feed-preview a,
+.bluesky-feed-widget a {
+    color: #1f2937;
+}
+
+.bluesky-feed-widget.theme-dim a,
+.bluesky-feed-widget.theme-dark a,
+.bluesky-feed.theme-dim a,
+.bluesky-feed.theme-dark a {
+    color: #FFF !important;
+}
+
 #bluesky-feed-preview a:hover,
 .bluesky-feed-widget a:hover {
     text-decoration: none !important;
@@ -226,4 +238,128 @@ body[data-theme="dark"] .bluesky-feed-widget .text-gray-500 {
 
 .bluesky-feed-grid .bg-white {
     margin-bottom: 0;
+}
+
+.bluesky-feed-grid .bluesky-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.bluesky-feed-grid .bluesky-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bluesky-link-preview {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+.theme-dim .bluesky-link-preview,
+.theme-dark .bluesky-link-preview {
+    background: #151E27;
+    color: #EDF2F5;
+    border: 1px solid #333f4b;
+}
+
+.theme-dark .bluesky-link-preview {
+    background-color: #171717;
+    border: 1px solid rgb(46,64,82);
+}
+
+.bluesky-link-card {
+    display: block; /* Make the card a block element */
+    text-decoration: none;
+    color: inherit;
+}
+
+.bluesky-link-image-large {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-height: 500px; /* Limit max height for better layout */
+}
+
+.bluesky-link-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.bluesky-link-info strong {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bluesky-link-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+.theme-dim .bluesky-link-info p,
+.theme-dark .bluesky-link-info p {
+    color: #e5e7eb;
+}
+
+.bluesky-post-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.bluesky-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bluesky-author {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.theme-dim .bluesky-author,
+.theme-dark .bluesky-author {
+    color: #FFF;
+}
+
+.bluesky-repost-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.theme-dim .bluesky-repost-indicator,
+.theme-dark .bluesky-repost-indicator {
+    color: #FFF;
+}
+
+.bluesky-repost-indicator svg {
+    width: 16px;
+    height: 16px;
+    color: #4caf50; /* Green color to indicate retweet */
+}
+
+.bluesky-gif-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-height: 400px; /* Limit height for better layout */
 }
