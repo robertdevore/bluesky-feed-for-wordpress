@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bluesky Feed for WordPress®\n"
+"POT-Creation-Date: 2025-02-01 11:33-0500\n"
+"PO-Revision-Date: 2025-02-01 11:34-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: bluesky-feed-for-wordpress.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: bluesky-feed-for-wordpress.php:84
+msgid "Bluesky Feed for WordPress® Settings"
+msgstr "Bluesky Feed pour WordPress® Paramètres"
+
+#: bluesky-feed-for-wordpress.php:85
+msgid "Bluesky Feed"
+msgstr "Alimentation Bluesky"
+
+#: bluesky-feed-for-wordpress.php:108
+msgid "Bluesky Logo"
+msgstr "Logo Bluesky"
+
+#: bluesky-feed-for-wordpress.php:110
+msgid "Bluesky Feed Settings"
+msgstr "Paramètres du flux Bluesky"
+
+#: bluesky-feed-for-wordpress.php:113
+msgid "Support"
+msgstr "Support"
+
+#: bluesky-feed-for-wordpress.php:116
+msgid "Documentation"
+msgstr "Documentation"
+
+#: bluesky-feed-for-wordpress.php:125
+msgid "Bluesky Username"
+msgstr "Bluesky Nom d'utilisateur"
+
+#: bluesky-feed-for-wordpress.php:137
+msgid "Theme"
+msgstr "Thème"
+
+#: bluesky-feed-for-wordpress.php:140
+msgid "Light"
+msgstr "Clair"
+
+#: bluesky-feed-for-wordpress.php:141
+msgid "Dim"
+msgstr "Dim"
+
+#: bluesky-feed-for-wordpress.php:142
+msgid "Dark"
+msgstr "Sombre"
+
+#: bluesky-feed-for-wordpress.php:147
+msgid "Number of Posts"
+msgstr "Nombre d’articles"
+
+#: bluesky-feed-for-wordpress.php:159
+msgid "Include Pins"
+msgstr "Inclure les épingles"
+
+#: bluesky-feed-for-wordpress.php:170
+msgid "Include Link to Original Post"
+msgstr "Inclure un lien vers l'article original"
+
+#: bluesky-feed-for-wordpress.php:184
+msgid "Feed Preview"
+msgstr "Aperçu du flux"
+
+#: bluesky-feed-for-wordpress.php:323
+msgid "Bluesky Feed Widget"
+msgstr "Widget Bluesky Feed"
+
+#: bluesky-feed-for-wordpress.php:325
+msgid "Display your recent Bluesky posts."
+msgstr "Affichez vos messages récents sur Bluesky."
+
+#: bluesky-feed-for-wordpress.php:367
+msgid ""
+"This widget uses global settings. Update settings in the plugin options page."
+msgstr ""
+"Ce widget utilise des paramètres globaux. Mettez à jour les paramètres dans "
+"la page d'options du plugin."
+
+#: bluesky-feed-for-wordpress.php:499
+#, php-format
+msgid ""
+"My Plugin has been deactivated because it cannot be used on WordPress.com-"
+"hosted websites. %s"
+msgstr ""
+"Mon plugin a été désactivé car il ne peut pas être utilisé sur les sites "
+"hébergés par WordPress.com. %s"
+
+#: bluesky-feed-for-wordpress.php:500 bluesky-feed-for-wordpress.php:528
+msgid "Learn more"
+msgstr "En savoir plus"
+
+#: bluesky-feed-for-wordpress.php:525 bluesky-feed-for-wordpress.php:531
+msgid "Plugin Activation Blocked"
+msgstr "Activation du plugin bloquée"
+
+#: bluesky-feed-for-wordpress.php:526
+msgid ""
+"This plugin cannot be activated on WordPress.com-hosted websites. It is "
+"restricted due to concerns about WordPress.com policies impacting the "
+"community."
+msgstr ""
+"Ce plugin ne peut pas être activé sur les sites web hébergés par WordPress."
+"com. Il est restreint en raison de préoccupations concernant les politiques "
+"de WordPress.com ayant un impact sur la communauté."
+
+#. Plugin Name of the plugin/theme
+msgid "Bluesky Feed for WordPress®"
+msgstr "Bluesky Feed pour WordPress®"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/robertdevore/bluesky-feed-for-wordpress/"
+msgstr "https://github.com/robertdevore/bluesky-feed-for-wordpress/"
+
+#. Description of the plugin/theme
+msgid ""
+"Showcase your latest Bluesky posts on your WordPress® site with customizable "
+"display options and seamless integration"
+msgstr ""
+"Présentez vos derniers articles Bluesky sur votre site WordPress® avec des "
+"options d'affichage personnalisables et une intégration transparente"
+
+#. Author of the plugin/theme
+msgid "Robert DeVore"
+msgstr "Robert DeVore"
+
+#. Author URI of the plugin/theme
+msgid "https://robertdevore.com/"
+msgstr "https://robertdevore.com/"
