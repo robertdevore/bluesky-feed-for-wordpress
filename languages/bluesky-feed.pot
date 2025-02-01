@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bluesky Feed for WordPress®\n"
-"POT-Creation-Date: 2024-11-26 22:35-0500\n"
-"PO-Revision-Date: 2024-11-26 22:35-0500\n"
+"POT-Creation-Date: 2025-02-01 11:31-0500\n"
+"PO-Revision-Date: 2025-02-01 11:31-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -93,6 +93,28 @@ msgstr ""
 #: bluesky-feed-for-wordpress.php:367
 msgid ""
 "This widget uses global settings. Update settings in the plugin options page."
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:499
+#, php-format
+msgid ""
+"My Plugin has been deactivated because it cannot be used on WordPress.com-"
+"hosted websites. %s"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:500 bluesky-feed-for-wordpress.php:528
+msgid "Learn more"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:525 bluesky-feed-for-wordpress.php:531
+msgid "Plugin Activation Blocked"
+msgstr ""
+
+#: bluesky-feed-for-wordpress.php:526
+msgid ""
+"This plugin cannot be activated on WordPress.com-hosted websites. It is "
+"restricted due to concerns about WordPress.com policies impacting the "
+"community."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
