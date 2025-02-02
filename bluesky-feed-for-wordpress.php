@@ -11,7 +11,7 @@
  * Plugin Name: Bluesky Feed for WordPress®
  * Description: Showcase your latest Bluesky posts on your WordPress® site with customizable display options and seamless integration
  * Plugin URI:  https://github.com/robertdevore/bluesky-feed-for-wordpress/
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Robert DeVore
  * Author URI:  https://robertdevore.com/
  * License:     GPL-2.0+
@@ -39,7 +39,7 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 $myUpdateChecker->setBranch( 'main' );
 
 // Set the version number.
-define( 'BLUESKY_FEED_VERSION', '1.0.0' );
+define( 'BLUESKY_FEED_VERSION', '1.1.0' );
 
 /**
  * Main plugin class for building the Bluesky Feed.
