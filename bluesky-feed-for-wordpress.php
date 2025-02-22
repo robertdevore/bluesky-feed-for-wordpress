@@ -51,6 +51,21 @@ use RobertDevore\WPComCheck\WPComPluginHandler;
 new WPComPluginHandler( plugin_basename( __FILE__ ), 'https://robertdevore.com/why-this-plugin-doesnt-support-wordpress-com-hosting/' );
 
 /**
+ * Load plugin text domain for translations
+ * 
+ * @since  1.1.0
+ * @return void
+ */
+function bluesky_feed_load_textdomain() {
+    load_plugin_textdomain( 
+        'bluesky-feed',
+        false,
+        dirname( plugin_basename( __FILE__ ) ) . '/languages/'
+    );
+}
+add_action( 'plugins_loaded', 'bluesky_feed_load_textdomain' );
+
+/**
  * Main plugin class for building the Bluesky Feed.
  */
 class Bluesky_Feed {
