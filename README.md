@@ -14,6 +14,7 @@ Showcase your recent Bluesky posts on your WordPress® website in a variety of w
 - **Real-Time Fetching**: Fetch your latest Bluesky posts via the official API.
 - **Pin Filtering**: Optionally include or exclude pinned posts.
 - **Responsive Design**: Feed styles adapt seamlessly across devices.
+- **Translation Ready**: Currently translated into Spanish, French, Italian, Afrikaans, and Hindi
 * * *
 
 ## Installation
