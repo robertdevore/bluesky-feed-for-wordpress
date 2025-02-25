@@ -9,7 +9,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Main plugin class for building the Bluesky Feed.
  * 
  * @package Bluesky_Feed_For_WordPress
- * @since 1.0.0
+ * @since   1.0.0
  */
 class Bluesky_Feed {
     /**
@@ -219,7 +219,7 @@ class Bluesky_Feed {
 
         wp_enqueue_script(
             'bluesky-feed-renderer',
-            plugin_dir_url(BLUESKY_FEED_PLUGIN_PATH) . 'assets/js/feed-renderer.js',
+            plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/js/feed-renderer.js',
             [ 'axios' ],
             BLUESKY_FEED_VERSION,
             true
@@ -227,7 +227,7 @@ class Bluesky_Feed {
     
         wp_enqueue_script(
             'bluesky-admin',
-            plugin_dir_url(BLUESKY_FEED_PLUGIN_PATH) . 'assets/js/admin.js',
+            plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/js/admin.js',
             [ 'bluesky-feed-renderer' ],
             BLUESKY_FEED_VERSION,
             true
@@ -235,7 +235,7 @@ class Bluesky_Feed {
     
         wp_enqueue_script(
             'bluesky-widget',
-            plugin_dir_url(BLUESKY_FEED_PLUGIN_PATH) . 'assets/js/widget.js',
+            plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/js/widget.js',
             [ 'bluesky-feed-renderer' ],
             BLUESKY_FEED_VERSION,
             true

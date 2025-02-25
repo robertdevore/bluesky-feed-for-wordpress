@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Bluesky Feed for WordPress®\n"
-"POT-Creation-Date: 2025-02-01 11:31-0500\n"
+"POT-Creation-Date: 2025-02-25 15:35-0500\n"
 "PO-Revision-Date: 2025-02-01 11:31-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
