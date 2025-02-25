@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bluesky Feed for WordPress®\n"
+"POT-Creation-Date: 2025-02-25 15:35-0500\n"
+"PO-Revision-Date: 2025-02-25 15:36-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: bluesky-feed-for-wordpress.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: classes/Bluesky_Feed.php:50
+msgid "Bluesky Feed for WordPress® Settings"
+msgstr "Bluesky Feed vir WordPress®-instellings"
+
+#: classes/Bluesky_Feed.php:51
+msgid "Bluesky Feed"
+msgstr "Bluesky Feed"
+
+#: classes/Bluesky_Feed.php:74
+msgid "Bluesky Logo"
+msgstr "Bluesky Logo"
+
+#: classes/Bluesky_Feed.php:76
+msgid "Bluesky Feed Settings"
+msgstr "Bluesky-voerinstellings"
+
+#: classes/Bluesky_Feed.php:79
+msgid "Support"
+msgstr "Hulp"
+
+#: classes/Bluesky_Feed.php:82
+msgid "Documentation"
+msgstr "Dokumentasie"
+
+#: classes/Bluesky_Feed.php:91
+msgid "Bluesky Username"
+msgstr "Bluesky Gebruikersnaam"
+
+#: classes/Bluesky_Feed.php:103
+msgid "Theme"
+msgstr "Tema"
+
+#: classes/Bluesky_Feed.php:106
+msgid "Light"
+msgstr "Lig"
+
+#: classes/Bluesky_Feed.php:107
+msgid "Dim"
+msgstr "Dim"
+
+#: classes/Bluesky_Feed.php:108
+msgid "Dark"
+msgstr "Donker"
+
+#: classes/Bluesky_Feed.php:113
+msgid "Number of Posts"
+msgstr "Aantal Arikels"
+
+#: classes/Bluesky_Feed.php:125
+msgid "Include Pins"
+msgstr "Sluit spelde in"
+
+#: classes/Bluesky_Feed.php:136
+msgid "Include Link to Original Post"
+msgstr "Sluit skakel na oorspronklike plasing in"
+
+#: classes/Bluesky_Feed.php:150
+msgid "Feed Preview"
+msgstr "Voervoorskou"
+
+#: classes/Bluesky_Widget.php:28
+msgid "Bluesky Feed Widget"
+msgstr "Bluesky Feed Widget"
+
+#: classes/Bluesky_Widget.php:30
+msgid "Display your recent Bluesky posts."
+msgstr "Wys jou onlangse Bluesky-plasings."
+
+#: classes/Bluesky_Widget.php:72
+msgid ""
+"This widget uses global settings. Update settings in the plugin options page."
+msgstr ""
+"Hierdie legstuk gebruik globale instellings. Dateer instellings op die "
+"inpropopsiesbladsy op."
+
+#. Plugin Name of the plugin/theme
+msgid "Bluesky Feed for WordPress®"
+msgstr "Bluesky Feed vir WordPress®"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/robertdevore/bluesky-feed-for-wordpress/"
+msgstr "https://github.com/robertdevore/bluesky-feed-for-wordpress/"
+
+#. Description of the plugin/theme
+msgid ""
+"Showcase your latest Bluesky posts on your WordPress® site with customizable "
+"display options and seamless integration"
+msgstr ""
+"Wys jou nuutste Bluesky-plasings op jou WordPress®-werf met aanpasbare "
+"vertoonopsies en naatlose integrasie"
+
+#. Author of the plugin/theme
+msgid "Robert DeVore"
+msgstr "Robert DeVore"
+
+#. Author URI of the plugin/theme
+msgid "https://robertdevore.com/"
+msgstr "https://robertdevore.com/"
