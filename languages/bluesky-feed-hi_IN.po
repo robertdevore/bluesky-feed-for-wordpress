@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bluesky Feed for WordPress®\n"
+"POT-Creation-Date: 2025-02-25 15:38-0500\n"
+"PO-Revision-Date: 2025-02-25 15:38-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: bluesky-feed-for-wordpress.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: classes/Bluesky_Feed.php:50
+msgid "Bluesky Feed for WordPress® Settings"
+msgstr "WordPress® के लिए Bluesky फ़ीड सेटिंग्स"
+
+#: classes/Bluesky_Feed.php:51
+msgid "Bluesky Feed"
+msgstr "ब्लूस्काई फ़ीड"
+
+#: classes/Bluesky_Feed.php:74
+msgid "Bluesky Logo"
+msgstr "ब्लूस्काई लोगो"
+
+#: classes/Bluesky_Feed.php:76
+msgid "Bluesky Feed Settings"
+msgstr "ब्लूस्काई फ़ीड सेटिंग्स"
+
+#: classes/Bluesky_Feed.php:79
+msgid "Support"
+msgstr "मदद"
+
+#: classes/Bluesky_Feed.php:82
+msgid "Documentation"
+msgstr "प्रलेखन"
+
+#: classes/Bluesky_Feed.php:91
+msgid "Bluesky Username"
+msgstr "ब्लूस्काई उपयोगकर्ता नाम"
+
+#: classes/Bluesky_Feed.php:103
+msgid "Theme"
+msgstr "विषय"
+
+#: classes/Bluesky_Feed.php:106
+msgid "Light"
+msgstr "रोशनी"
+
+#: classes/Bluesky_Feed.php:107
+msgid "Dim"
+msgstr "धुंधला"
+
+#: classes/Bluesky_Feed.php:108
+msgid "Dark"
+msgstr "अँधेरा"
+
+#: classes/Bluesky_Feed.php:113
+msgid "Number of Posts"
+msgstr "पदों की संख्या"
+
+#: classes/Bluesky_Feed.php:125
+msgid "Include Pins"
+msgstr "पिन शामिल करें"
+
+#: classes/Bluesky_Feed.php:136
+msgid "Include Link to Original Post"
+msgstr "मूल पोस्ट का लिंक शामिल करें"
+
+#: classes/Bluesky_Feed.php:150
+msgid "Feed Preview"
+msgstr "फ़ीड पूर्वावलोकन"
+
+#: classes/Bluesky_Widget.php:28
+msgid "Bluesky Feed Widget"
+msgstr "ब्लूस्काई फ़ीड विजेट"
+
+#: classes/Bluesky_Widget.php:30
+msgid "Display your recent Bluesky posts."
+msgstr "अपनी हालिया ब्लूस्काई पोस्ट प्रदर्शित करें।"
+
+#: classes/Bluesky_Widget.php:72
+msgid ""
+"This widget uses global settings. Update settings in the plugin options page."
+msgstr "यह विजेट वैश्विक सेटिंग्स का उपयोग करता है। प्लगइन विकल्प पृष्ठ में सेटिंग्स अपडेट करें।"
+
+#. Plugin Name of the plugin/theme
+msgid "Bluesky Feed for WordPress®"
+msgstr "WordPress® के लिए ब्लूस्काई फ़ीड"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/robertdevore/bluesky-feed-for-wordpress/"
+msgstr "https://github.com/robertdevore/bluesky-feed-for-wordpress/"
+
+#. Description of the plugin/theme
+msgid ""
+"Showcase your latest Bluesky posts on your WordPress® site with customizable "
+"display options and seamless integration"
+msgstr ""
+"अनुकूलन योग्य प्रदर्शन विकल्पों और सहज एकीकरण के साथ अपनी WordPress® साइट पर अपने "
+"नवीनतम Bluesky पोस्ट प्रदर्शित करें"
+
+#. Author of the plugin/theme
+msgid "Robert DeVore"
+msgstr "रॉबर्ट डेवोर"
+
+#. Author URI of the plugin/theme
+msgid "https://robertdevore.com/"
+msgstr "https://robertdevore.com/"
