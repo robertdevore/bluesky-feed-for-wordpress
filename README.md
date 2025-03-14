@@ -45,11 +45,27 @@ Use the `[bluesky_feed]` shortcode in any post or page.
 Available attributes:
 
 - `display`: Choose between `list` (default) or `grid`.
+- `post_count`: Control how many posts shall be displayed. If not provided the number from the app settings will be used.
 
 Example:
  
 ```
-[bluesky_feed display="grid"]
+[bluesky_feed display="grid" post_count="10"]
+```
+
+If you want to load the dependencies outside of a widget or a content shortcode (eg. `echo do_shortcode("[bluesky_feed display='grid']")`) set the global variable `$loadBlueSkyApp` to true.
+
+Example:
+
+
+```
+function loadBlueSkyApp() {
+    if(is_front_page()) {
+        global $loadBlueSkyApp;
+        $loadBlueSkyApp = true;
+    }
+}
+add_action( 'wp', 'loadBlueSkyApp' );
 ```
 
 ### 3. **Admin Preview**

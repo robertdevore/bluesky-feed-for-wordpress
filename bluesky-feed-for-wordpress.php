@@ -57,12 +57,12 @@ require 'classes/Bluesky_Widget.php';
 
 /**
  * Load plugin text domain for translations
- * 
+ *
  * @since  1.1.0
  * @return void
  */
 function bluesky_feed_load_textdomain() {
-    load_plugin_textdomain( 
+    load_plugin_textdomain(
         'bluesky-feed',
         false,
         dirname( plugin_basename( __FILE__ ) ) . '/languages/'
@@ -90,7 +90,7 @@ add_action( 'widgets_init', 'bluesky_register_widget' );
  * Shortcode to display Bluesky feed.
  *
  * @param array $atts Shortcode attributes.
- * 
+ *
  * @since  1.0.0
  * @return string Rendered HTML for the feed.
  */
@@ -99,6 +99,7 @@ function bluesky_feed_shortcode( $atts ) {
     $atts = shortcode_atts(
         [
             'display' => 'list',
+            'post_count' => 0
         ],
         $atts,
         'bluesky_feed'
@@ -107,7 +108,7 @@ function bluesky_feed_shortcode( $atts ) {
     // Get plugin settings.
     $settings = [
         'username'    => esc_attr( get_option( 'bluesky_username', '' ) ),
-        'postCount'   => absint( get_option( 'bluesky_post_count', 5 ) ),
+        'postCount'   => $atts['post_count'] ?: absint( get_option( 'bluesky_post_count', 5 ) ),
         'includePins' => absint( get_option( 'bluesky_include_pins', 1 ) ),
         'includeLink' => absint( get_option( 'bluesky_include_link', 1 ) ),
         'theme'       => esc_attr( get_option( 'bluesky_theme', 'light' ) ),
