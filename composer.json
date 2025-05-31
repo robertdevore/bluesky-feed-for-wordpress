@@ -1,4 +1,13 @@
 {
+    "name":"robertdevore/bluesky-feed-for-wordpress",
+    "description": "Showcase your recent Bluesky posts on your WordPress® website in a variety of ways.",
+    "license": "GPL-2.0-or-later",
+    "type": "wordpress-plugin",
+    "author" : [
+        {
+            "name": "Robert DeVore",
+        }
+    ],
     "require": {
         "robertdevore/wpcom-check": "^1.0"
     }
