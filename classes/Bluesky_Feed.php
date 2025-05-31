@@ -7,14 +7,14 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * Main plugin class for building the Bluesky Feed.
- * 
+ *
  * @package Bluesky_Feed_For_WordPress
  * @since   1.0.0
  */
 class Bluesky_Feed {
     /**
      * Constructor - Hooks into WordPress actions.
-     * 
+     *
      * @since  1.0.0
      * @return void
      */
@@ -27,7 +27,7 @@ class Bluesky_Feed {
 
     /**
      * Registers settings for the plugin.
-     * 
+     *
      * @since  1.0.0
      * @return void
      */
@@ -41,7 +41,7 @@ class Bluesky_Feed {
 
     /**
      * Adds the settings page to the WordPress admin menu.
-     * 
+     *
      * @since  1.0.0
      * @return void
      */
@@ -57,7 +57,7 @@ class Bluesky_Feed {
 
     /**
      * Renders the settings page in the admin area.
-     * 
+     *
      * @since  1.0.0
      * @return void
      */
@@ -70,8 +70,8 @@ class Bluesky_Feed {
         ?>
         <div class="wrap">
             <h1>
-                <img src="<?php echo esc_url( plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/img/bluesky-logo.svg' ); ?>" 
-                alt="<?php esc_attr_e( 'Bluesky Logo', 'bluesky-feed' ); ?>" 
+                <img src="<?php echo esc_url( plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/img/bluesky-logo.svg' ); ?>"
+                alt="<?php esc_attr_e( 'Bluesky Logo', 'bluesky-feed' ); ?>"
                 style="vertical-align: middle; height: 24px; margin-right: 0px;">
                 <?php esc_html_e( 'Bluesky Feed Settings', 'bluesky-feed' ); ?>
             <?php
@@ -90,11 +90,11 @@ class Bluesky_Feed {
                     <tr>
                         <th><?php esc_html_e( 'Bluesky Username', 'bluesky-feed' ); ?></th>
                         <td>
-                            <input 
-                                id="bluesky_username" 
-                                type="text" 
-                                name="bluesky_username" 
-                                value="<?php echo esc_attr( $username ); ?>" 
+                            <input
+                                id="bluesky_username"
+                                type="text"
+                                name="bluesky_username"
+                                value="<?php echo esc_attr( $username ); ?>"
                                 class="regular-text"
                             >
                         </td>
@@ -112,11 +112,11 @@ class Bluesky_Feed {
                     <tr>
                         <th><?php esc_html_e( 'Number of Posts', 'bluesky-feed' ); ?></th>
                         <td>
-                            <input 
-                                type="number" 
-                                name="bluesky_post_count" 
-                                value="<?php echo esc_attr( $post_count ); ?>" 
-                                min="1" 
+                            <input
+                                type="number"
+                                name="bluesky_post_count"
+                                value="<?php echo esc_attr( $post_count ); ?>"
+                                min="1"
                                 max="20"
                             >
                         </td>
@@ -124,10 +124,10 @@ class Bluesky_Feed {
                     <tr>
                         <th><?php esc_html_e( 'Include Pins', 'bluesky-feed' ); ?></th>
                         <td>
-                            <input 
-                                type="checkbox" 
-                                name="bluesky_include_pins" 
-                                value="1" 
+                            <input
+                                type="checkbox"
+                                name="bluesky_include_pins"
+                                value="1"
                                 <?php checked( $include_pins, 1 ); ?>
                             >
                         </td>
@@ -135,10 +135,10 @@ class Bluesky_Feed {
                     <tr>
                         <th><?php esc_html_e( 'Include Link to Original Post', 'bluesky-feed' ); ?></th>
                         <td>
-                            <input 
-                                type="checkbox" 
-                                name="bluesky_include_link" 
-                                value="1" 
+                            <input
+                                type="checkbox"
+                                name="bluesky_include_link"
+                                value="1"
                                 <?php checked( $include_link, 1 ); ?>
                             >
                         </td>
@@ -155,14 +155,18 @@ class Bluesky_Feed {
 
     /**
      * Enqueue scripts and styles for the frontend.
-     * 
+     *
      * @since  1.0.0
      * @return void
      */
     public function enqueue_frontend_assets() {
+
+        // Get Global variable; used for code init (example: do_shortcode("[bluesky_feed]"))
+        global $loadBlueSkyApp;
+
         // Check if the widget is active or the shortcode is used on the current page.
-        if (
-            is_active_widget( false, false, 'bluesky_widget', true ) || 
+        if ($loadBlueSkyApp ||
+            is_active_widget( false, false, 'bluesky_widget', true ) ||
             ( is_singular() && has_shortcode( get_post()->post_content, 'bluesky_feed' ) )
         ) {
             wp_enqueue_script(
@@ -180,7 +184,7 @@ class Bluesky_Feed {
                 BLUESKY_FEED_VERSION,
                 true
             );
-    
+
             wp_enqueue_script(
                 'bluesky-widget',
                 plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/js/widget.js',
@@ -200,7 +204,7 @@ class Bluesky_Feed {
 
     /**
      * Enqueues scripts and styles for the admin area.
-     * 
+     *
      * @since  1.0.0
      * @return void
      */
@@ -209,12 +213,12 @@ class Bluesky_Feed {
             return;
         }
 
-        wp_enqueue_script( 
-            'axios', 
-            plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/js/axios.min.js', 
-            [], 
-            BLUESKY_FEED_VERSION, 
-            true 
+        wp_enqueue_script(
+            'axios',
+            plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/js/axios.min.js',
+            [],
+            BLUESKY_FEED_VERSION,
+            true
         );
 
         wp_enqueue_script(
@@ -224,7 +228,7 @@ class Bluesky_Feed {
             BLUESKY_FEED_VERSION,
             true
         );
-    
+
         wp_enqueue_script(
             'bluesky-admin',
             plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/js/admin.js',
@@ -232,7 +236,7 @@ class Bluesky_Feed {
             BLUESKY_FEED_VERSION,
             true
         );
-    
+
         wp_enqueue_script(
             'bluesky-widget',
             plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/js/widget.js',
@@ -241,12 +245,12 @@ class Bluesky_Feed {
             true
         );
 
-        wp_enqueue_style( 
-            'bluesky-admin-styles', 
-            plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/css/feed-styles.css', 
-            [], 
-            BLUESKY_FEED_VERSION, 
-            'all' 
+        wp_enqueue_style(
+            'bluesky-admin-styles',
+            plugin_dir_url( BLUESKY_FEED_PLUGIN_PATH ) . 'assets/css/feed-styles.css',
+            [],
+            BLUESKY_FEED_VERSION,
+            'all'
         );
 
         wp_localize_script( 'bluesky-admin', 'blueskyAdminAjax', [
