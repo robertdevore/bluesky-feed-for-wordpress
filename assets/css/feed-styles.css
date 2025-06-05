@@ -247,7 +247,7 @@ body[data-theme="dark"] .bluesky-feed-widget .text-gray-500 {
     margin-top: 10px;
 }
 
-.bluesky-feed-grid .bluesky-images img {
+.bluesky-images img {
     max-width: 100%;
 }
 
