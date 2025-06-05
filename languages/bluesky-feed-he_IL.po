@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bluesky Feed for WordPress®\n"
+"POT-Creation-Date: 2025-06-05 18:05-0400\n"
+"PO-Revision-Date: 2025-06-05 18:07-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: bluesky-feed-for-wordpress.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: bluesky-feed-for-wordpress.php:82
+msgid "Settings"
+msgstr "הגדרות"
+
+#: classes/Bluesky_Feed.php:50
+msgid "Bluesky Feed for WordPress® Settings"
+msgstr "פיד Bluesky עבור הגדרות WordPress®"
+
+#: classes/Bluesky_Feed.php:51
+msgid "Bluesky Feed"
+msgstr "פיד בלוסקיי"
+
+#: classes/Bluesky_Feed.php:74
+msgid "Bluesky Logo"
+msgstr "לוגו בלוסקיי"
+
+#: classes/Bluesky_Feed.php:76
+msgid "Bluesky Feed Settings"
+msgstr "הגדרות פיד של בלוסקיי"
+
+#: classes/Bluesky_Feed.php:79
+msgid "Support"
+msgstr "תמיכה"
+
+#: classes/Bluesky_Feed.php:82
+msgid "Documentation"
+msgstr "תיעוד"
+
+#: classes/Bluesky_Feed.php:91
+msgid "Bluesky Username"
+msgstr "שם משתמש של בלוסקי"
+
+#: classes/Bluesky_Feed.php:103
+msgid "Theme"
+msgstr "תבנית"
+
+#: classes/Bluesky_Feed.php:106
+msgid "Light"
+msgstr "בהיר"
+
+#: classes/Bluesky_Feed.php:107
+msgid "Dim"
+msgstr "עָמוּם"
+
+#: classes/Bluesky_Feed.php:108
+msgid "Dark"
+msgstr "כהה"
+
+#: classes/Bluesky_Feed.php:113
+msgid "Number of Posts"
+msgstr "מספר פוסטים להצגה"
+
+#: classes/Bluesky_Feed.php:125
+msgid "Include Pins"
+msgstr "כלול סיכות"
+
+#: classes/Bluesky_Feed.php:136
+msgid "Include Link to Original Post"
+msgstr "כלול קישור לפוסט המקורי"
+
+#: classes/Bluesky_Feed.php:150
+msgid "Feed Preview"
+msgstr "תצוגה מקדימה של הפיד"
+
+#: classes/Bluesky_Widget.php:28
+msgid "Bluesky Feed Widget"
+msgstr "ווידג'ט פיד של בלוסקיי"
+
+#: classes/Bluesky_Widget.php:30
+msgid "Display your recent Bluesky posts."
+msgstr "הצג את הפוסטים האחרונים שלך ב-Bluesky."
+
+#: classes/Bluesky_Widget.php:72
+msgid ""
+"This widget uses global settings. Update settings in the plugin options page."
+msgstr "ווידג'ט זה משתמש בהגדרות גלובליות. עדכן את ההגדרות בדף אפשרויות התוסף."
+
+#. Plugin Name of the plugin/theme
+msgid "Bluesky Feed for WordPress®"
+msgstr "פיד בלוסקיי עבור וורדפרס®"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/robertdevore/bluesky-feed-for-wordpress/"
+msgstr "https://github.com/robertdevore/bluesky-feed-for-wordpress/"
+
+#. Description of the plugin/theme
+msgid ""
+"Showcase your latest Bluesky posts on your WordPress® site with customizable "
+"display options and seamless integration"
+msgstr ""
+"הציגו את הפוסטים האחרונים שלכם ב-Bluesky באתר WordPress® שלכם עם אפשרויות "
+"תצוגה הניתנות להתאמה אישית ושילוב חלק"
+
+#. Author of the plugin/theme
+msgid "Robert DeVore"
+msgstr "רוברט דה-בור"
+
+#. Author URI of the plugin/theme
+msgid "https://robertdevore.com/"
+msgstr "‫https://robertdevore.com"
