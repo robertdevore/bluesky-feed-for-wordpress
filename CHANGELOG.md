@@ -2,7 +2,11 @@
 
 ## 1.2.0
 
-
+* [📦 NEW: Added Hebrew (Israel) translation](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/88ff81bd4532af877e8cf67396247ec9cf310c67)
+* [📦 NEW: Added 'Settings' link to the Plugins page](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/a49a5f2403869eb7241b49f2d426b82e8b68b08d)
+* [👌 IMPROVE: Updated feed images with a max-width for FSE themes](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/de309daa5bf46053b1fd3b35e3d06d37af9a4a5c)
+* [🐛 BUG: Fixed reactions from being misaligned in some instances (FSE display)](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/462d1c26aeb74bec26b7e1c2650b5441357965e3)
+* [👌 IMPROVE: Updated text strings for localization](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/3de32b6acc1a0acd581e98f55aed303de28ee5e6)
 
 ## 1.1.1
 
