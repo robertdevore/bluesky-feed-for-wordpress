@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.0
+
+
+
 ## 1.1.1
 
 * [📦 NEW: Added Afrikaans translation](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/0cc5ecc84b533be8a87fe088f8f86ed121e16ac6)
