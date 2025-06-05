@@ -53,7 +53,7 @@ function renderFeed(container, settings) {
                 const repostCount = post.repostCount || 0;
                 const likeCount = post.likeCount || 0;
 
-                // Check if the post is a repost (retweet)
+                // Check if the post is a repost (retweet).
                 let repostIndicator = "";
                 if (item.reason && item.reason.$type === "app.bsky.feed.defs#reasonRepost") {
                     const originalAuthor = item.reason.by.displayName || item.reason.by.handle;
@@ -76,15 +76,11 @@ function renderFeed(container, settings) {
                 if (post.embed?.images) {
                     mediaHtml = `<div class="bluesky-images">`;
                     post.embed.images.forEach((image) => {
-                        // Check if the image is a GIF
                         const isGif = image.fullsize.toLowerCase().includes(".gif");
-
-                        // Remove query parameters from GIF URLs
                         let fullsizeUrl = image.fullsize;
                         if (isGif) {
-                            fullsizeUrl = fullsizeUrl.split("?")[0]; // Remove ?hh=333&ww=498
+                            fullsizeUrl = fullsizeUrl.split("?")[0];
                         }
-
                         mediaHtml += `
                             <img src="${isGif ? fullsizeUrl : image.thumb}" 
                                 alt="Bluesky Post Image" 
@@ -96,24 +92,25 @@ function renderFeed(container, settings) {
 
                 // Extract external link previews (cards) with large image
                 let linkPreviewHtml = "";
-                    if (post.embed?.external) {
-                        const { uri, title, description, thumb } = post.embed.external;
+                if (post.embed?.external) {
+                    const { uri, title, description, thumb } = post.embed.external;
+                    const isGif = uri.toLowerCase().includes(".gif");
+                    let gifUrl = uri; // Use original uri by default
+                    if (isGif) {
+                         gifUrl = uri.split("?")[0]; // Remove query parameters if it's a GIF
+                    }
 
-                        // Check if the `uri` contains a `.gif`, and remove query parameters
-                        const isGif = uri.toLowerCase().includes(".gif");
-                        let gifUrl = uri.split("?")[0]; // Remove ?hh=333&ww=498 if present
-
-                        linkPreviewHtml = `
+                    linkPreviewHtml = `
                         <div class="bluesky-link-preview">
                             <a href="${uri}" target="_blank" rel="noopener noreferrer" class="bluesky-link-card">
                                 ${
-                                    isGif
-                                        ? `<img src="${gifUrl}" alt="Animated GIF" class="bluesky-gif-image">`
-                                        : `<img src="${thumb}" alt="Link preview image" class="bluesky-link-image-large">
-                                            <div class="bluesky-link-info">
+                                    isGif && thumb // Check if thumb exists for GIF, otherwise it might be a direct GIF link
+                                        ? `<img src="${gifUrl}" alt="Animated GIF" class="bluesky-gif-image">` // If it's a GIF and we want to display it directly
+                                        : (thumb ? `<img src="${thumb}" alt="Link preview image" class="bluesky-link-image-large">` : '') + // Standard image preview
+                                          `<div class="bluesky-link-info">
                                                 <strong>${title}</strong>
                                                 <p>${description}</p>
-                                            </div>`
+                                           </div>`
                                 }
                             </a>
                         </div>
@@ -122,46 +119,59 @@ function renderFeed(container, settings) {
 
                 // Format post content to preserve line breaks, clickable full URLs, and hashtags
                 const formattedContent = content
-                    .replace(/\n/g, "<br>") // Preserve newlines as <br>
-                    .replace(/((https?:\/\/[^\s]+))/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>') // Ensure full URLs remain clickable
-                    .replace(/(^|\s)(#[a-zA-Z0-9_]+)/g, '$1<span class="bluesky-hashtag">$2</span>'); // Style hashtags
+                    .replace(/\n/g, "<br>")
+                    .replace(/((https?:\/\/[^\s]+))/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
+                    .replace(/(^|\s)(#[a-zA-Z0-9_]+)/g, '$1<span class="bluesky-hashtag">$2</span>');
 
                 const postElement = document.createElement("div");
                 postElement.className = "bg-white dark:bg-gray-900 dim:bg-gray-800 p-4 rounded-md shadow-md mb-4";
 
-                postElement.innerHTML = `
-                    ${repostIndicator} <!-- Show repost indicator above the post -->
-                    <a href="${postUrl}" target="_blank" rel="noopener noreferrer" class="bluesky-post-link">
+                // Define the main body of the post (header, text, media, date)
+                const postBodyHtml = `
                     <div class="bluesky-post-header">
                         <img src="${authorAvatar}" alt="${authorName}" class="bluesky-avatar">
                         <span class="bluesky-author">${authorName}</span>
-                        </div>
-                        <div class="text-gray-700 dark:text-gray-300 dim:text-gray-400 mt-2">${formattedContent}</div>
-                        ${mediaHtml}
-                        ${linkPreviewHtml}
-                        <div class="text-gray-500 text-sm mt-2">${createdAt}</div>
-                        ${
-                            includeLink && postUrl
-                                ? `</a>`
-                                : ""
-                        }
-                        <div class="reaction-icons mt-4">
-                            <div class="reaction-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-circle" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24V24H0z" fill="none"></path>
-                                    <path d="M3 21v-4a9 9 0 1 1 4 4h-4"></path>
-                                </svg>
-                                <span>${replyCount}</span>
-                            </div>
-                            <div class="reaction-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24V24H0z" fill="none"></path>
-                                    <path d="M12 20l-7 -7a4 4 0 0 1 0 -5.6a4 4 0 0 1 5.6 0l1.4 1.4l1.4 -1.4a4 4 0 0 1 5.6 0a4 4 0 0 1 0 5.6z"></path>
-                                </svg>
-                                <span>${likeCount}</span>
-                            </div>
-                        </a>
                     </div>
+                    <div class="text-gray-700 dark:text-gray-300 dim:text-gray-400 mt-2">${formattedContent}</div>
+                    ${mediaHtml}
+                    ${linkPreviewHtml}
+                    <div class="text-gray-500 text-sm mt-2">${createdAt}</div>
+                `;
+
+                // Conditionally wrap the post body with a link or a div
+                let wrappedPostBody;
+                if (includeLink && postUrl) {
+                    wrappedPostBody = `<a href="${postUrl}" target="_blank" rel="noopener noreferrer" class="bluesky-post-link">${postBodyHtml}</a>`;
+                } else {
+                    // If not linking, wrap in a div, possibly with the same class if it carries styling
+                    wrappedPostBody = `<div class="bluesky-post-link-wrapper">${postBodyHtml}</div>`;
+                }
+
+                // Define the reaction icons HTML
+                const reactionsHtml = `
+                    <div class="reaction-icons mt-4">
+                        <div class="reaction-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-circle" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24V24H0z" fill="none"></path>
+                                <path d="M3 21v-4a9 9 0 1 1 4 4h-4"></path>
+                            </svg>
+                            <span>${replyCount}</span>
+                        </div>
+                        <div class="reaction-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24V24H0z" fill="none"></path>
+                                <path d="M12 20l-7 -7a4 4 0 0 1 0 -5.6a4 4 0 0 1 5.6 0l1.4 1.4l1.4 -1.4a4 4 0 0 1 5.6 0a4 4 0 0 1 0 5.6z"></path>
+                            </svg>
+                            <span>${likeCount}</span>
+                        </div>
+                    </div>
+                `;
+
+                // Assemble the final HTML for the post element
+                postElement.innerHTML = `
+                    ${repostIndicator}
+                    ${wrappedPostBody}
+                    ${reactionsHtml}
                 `;
 
                 container.appendChild(postElement);
