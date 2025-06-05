@@ -11,7 +11,7 @@
  * Plugin Name: Bluesky Feed for WordPress®
  * Description: Showcase your latest Bluesky posts on your WordPress® site with customizable display options and seamless integration
  * Plugin URI:  https://github.com/robertdevore/bluesky-feed-for-wordpress/
- * Version:     1.1.1
+ * Version:     1.2.0
  * Author:      Robert DeVore
  * Author URI:  https://robertdevore.com/
  * License:     GPL-2.0+
@@ -39,7 +39,7 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 $myUpdateChecker->setBranch( 'main' );
 
 // Set the version number.
-define( 'BLUESKY_FEED_VERSION', '1.1.1' );
+define( 'BLUESKY_FEED_VERSION', '1.2.0' );
 define( 'BLUESKY_FEED_PLUGIN_PATH', __FILE__ );
 
 // Check if Composer's autoloader is already registered globally.
@@ -69,6 +69,21 @@ function bluesky_feed_load_textdomain() {
     );
 }
 add_action( 'plugins_loaded', 'bluesky_feed_load_textdomain' );
+
+/**
+ * Add settings link to plugin page.
+ *
+ * @param array $links Existing links.
+ * 
+ * @since  1.1.0
+ * @return array Modified links.
+ */
+function bluesky_feed_add_settings_link( $links ) {
+    $settings_link = '<a href="options-general.php?page=bluesky-feed">' . esc_html__( 'Settings', 'bluesky-feed' ) . '</a>';
+    array_unshift( $links, $settings_link );
+    return $links;
+}
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'bluesky_feed_add_settings_link' );
 
 /**
  * Initialize the main class.
@@ -128,3 +143,4 @@ function bluesky_feed_shortcode( $atts ) {
     );
 }
 add_shortcode( 'bluesky_feed', 'bluesky_feed_shortcode' );
+
