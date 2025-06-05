@@ -7,6 +7,8 @@
 * [👌 IMPROVE: Updated feed images with a max-width for FSE themes](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/de309daa5bf46053b1fd3b35e3d06d37af9a4a5c)
 * [🐛 BUG: Fixed reactions from being misaligned in some instances (FSE display)](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/462d1c26aeb74bec26b7e1c2650b5441357965e3)
 * [👌 IMPROVE: Updated text strings for localization](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/3de32b6acc1a0acd581e98f55aed303de28ee5e6)
+* [👌 IMPROVE: Adds Post Count as Input Param for Shortcode. Adds Global Variable $loadBlueSkyApp to enable loading dependencies from code. Updates Readme.](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/65b7f4c4024cc83dd22e57ff0c58e9a87773c0d6)
+* [👌 IMPROVE: Update composer.json for composer install](https://github.com/robertdevore/bluesky-feed-for-wordpress/commit/a565c02f4d4d3cd91c98bd5df4c48a04d066c942)
 
 ## 1.1.1
 
