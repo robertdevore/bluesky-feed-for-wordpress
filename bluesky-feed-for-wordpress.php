@@ -71,6 +71,21 @@ function bluesky_feed_load_textdomain() {
 add_action( 'plugins_loaded', 'bluesky_feed_load_textdomain' );
 
 /**
+ * Add settings link to plugin page.
+ *
+ * @param array $links Existing links.
+ * 
+ * @since  1.1.0
+ * @return array Modified links.
+ */
+function bluesky_feed_add_settings_link( $links ) {
+    $settings_link = '<a href="options-general.php?page=bluesky-feed">' . esc_html__( 'Settings', 'bluesky-feed' ) . '</a>';
+    array_unshift( $links, $settings_link );
+    return $links;
+}
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'bluesky_feed_add_settings_link' );
+
+/**
  * Initialize the main class.
  */
 new Bluesky_Feed();
@@ -127,3 +142,4 @@ function bluesky_feed_shortcode( $atts ) {
     );
 }
 add_shortcode( 'bluesky_feed', 'bluesky_feed_shortcode' );
+
